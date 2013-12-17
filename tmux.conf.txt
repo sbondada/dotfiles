@@ -1,0 +1,12 @@
+set -g default-terminal "xterm"
+# Use ctrl-a instead of ctrl-b
+set -g prefix C-a
+unbind C-b
+bind C-a send-prefix
+# using the terminal sttings to 256 so that vim when opened is displayed properly
+set -g default-terminal "screen-256color"
+#setting the limit to history
+set -g history-limit 20000
+# use of vi kind of bindings
+set -g status-keys vi
+setw -g mode-keys vi
