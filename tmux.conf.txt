@@ -10,3 +10,5 @@ set -g history-limit 20000
 # use of vi kind of bindings
 set -g status-keys vi
 setw -g mode-keys vi
+# adding a status message for wemux
+set -g status-right "#(wemux status_users)"
