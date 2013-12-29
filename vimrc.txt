@@ -49,6 +49,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'Solarized'
+Bundle 'flazz/vim-colorschemes' 
 
 set background=dark     "setting the vim background
 colorscheme solarized   "changes the color scheme( which in turn modifies every thing including the colors of the commenst and keyword etc
