@@ -48,6 +48,7 @@ Bundle 'gmarik/vundle'
 " original repos on GitHub
 Bundle 'tpope/vim-fugitive'
 Bundle 'davidhalter/jedi-vim'
+Bundle 'LaTeX-Box'
 Bundle 'Solarized'
 Bundle 'flazz/vim-colorschemes' 
 
