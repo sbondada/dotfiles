@@ -48,7 +48,13 @@ Bundle 'gmarik/vundle'
 " original repos on GitHub
 Bundle 'tpope/vim-fugitive'
 Bundle 'davidhalter/jedi-vim'
+
 Bundle 'LaTeX-Box'
+let g:LatexBox_latexmk_options = "-pvc -pdfps"
+
+"syntax on has to be externally onned to get the syntax highlights on to the
+"code
+syntax on
 Bundle 'Solarized'
 Bundle 'flazz/vim-colorschemes' 
 
