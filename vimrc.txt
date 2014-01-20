@@ -12,6 +12,8 @@ set tabstop=4           " a tab is four spaces
 set expandtab           " adds spaces in place of tab
 set smarttab
 
+set spell spelllang=en_us  " this spell cheks the file and use z= to correct and move with [s or ]s
+
 "inoremap can be split into i noremap. i is for insert mode, noremap is to map
 "the first combination to second.so in total remapping the command for a
 "particular mode
