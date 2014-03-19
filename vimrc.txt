@@ -79,6 +79,11 @@ set encoding=utf-8
 set t_Co=256          "color support for 256 colors
 
 filetype plugin indent on     " required!
+
+"this is for enabling the syntax highlighting for the markdown language even
+"for .md files
+au BufRead,BufNewFile *.md set filetype=markdown
+
 "
 "" Brief help
 " :BundleList          - list configured bundles
