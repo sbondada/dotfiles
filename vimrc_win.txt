@@ -12,10 +12,10 @@ set tabstop=4           " a tab is four spaces
 set expandtab           " adds spaces in place of tab
 set smarttab
 
-set spell spelllang=en_us  " this spell checks the file and use z= to correct and move with [s or ]s
+set spell spelllang=en_us  " this spell cheks the file and use z= to correct and move with [s or ]s
 "use zq to add into the dictionary and zw to mark the word as incorrect
 
-"ignoremap can be split into ignoremap. i is for insert mode, ignoremap is to map
+"inoremap can be split into i noremap. i is for insert mode, noremap is to map
 "the first combination to second.so in total remapping the command for a
 "particular mode
 
@@ -35,42 +35,40 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-if has('gui_running')
-    set guifont=Lucida_Sans_Typewriter:h10:cANSI
-endif
+" setup for the vundle starts here
 
-set nocompatible              " be improved, required
-filetype off                  " required
+set nocompatible
+filetype off            " required! for vundle
 
-" set the runtime path to include Vundle and initialize
-set rtp+=C:\Users\SrinivasaSaiKaushal\vimfiles\bundle\Vundle.vim
-let path='C:\Users\SrinivasaSaiKaushal\vimfiles\bundle\'
+set rtp+=~/.vim/bundle/vundle/
+let path='~/vimfiles/bundle'
 call vundle#begin(path)
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle
 " required! 
-Plugin 'gmarik/Vundle.vim'
+Bundle 'gmarik/vundle'
 
 " My bundles here:
 " original repos on GitHub
-Plugin 'tpope/vim-fugitive'
-Plugin 'davidhalter/jedi-vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'davidhalter/jedi-vim'
+
+Bundle 'LaTeX-Box'
+let g:LatexBox_latexmk_options = "-pvc -pdfps"
 
 "syntax on has to be externally onned to get the syntax highlights on to the
 "code
 syntax on
-Plugin 'Solarized'
-Plugin 'flazz/vim-colorschemes' 
+Bundle 'Solarized'
+Bundle 'flazz/vim-colorschemes' 
 
 set background=dark     "setting the vim background
-colorscheme slate   "changes the color scheme( which in turn modifies every thing including the colors of the comments and keyword etc
+colorscheme solarized   "changes the color scheme( which in turn modifies every thing including the colors of the commenst and keyword etc
 "setting the color scheme
 
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-airline'
+Bundle 'scrooloose/nerdtree'
+Bundle 'kien/ctrlp.vim'
+Bundle 'bling/vim-airline'
 
 "install the powerline symbols and the download the font and set them based on below code (info in vim bookmarks) 
 "set guifont=Liberation\ Mono\ for\ Powerline\ 10 
@@ -81,9 +79,18 @@ set noshowmode        "rejects the default showmode
 set encoding=utf-8
 set t_Co=256          "color support for 256 colors
 
-call vundle#end()
 filetype plugin indent on     " required!
 
 "this is for enabling the syntax highlighting for the markdown language even
 "for .md files
 au BufRead,BufNewFile *.md set filetype=markdown
+
+"
+"" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install (update) bundles
+" :BundleSearch(!) foo - search (or refresh cache first) for foo
+" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
+" "
+" " see :h vundle for more details or wiki for FAQ
+" " NOTE: comments after Bundle commands are not allowed.
