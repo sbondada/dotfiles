@@ -75,10 +75,6 @@ syntax on
 Plugin 'Solarized'
 Plugin 'flazz/vim-colorschemes' 
 
-set background=dark     "setting the vim background
-colorscheme slate   "changes the color scheme( which in turn modifies every thing including the colors of the comments and keyword etc
-"setting the color scheme
-
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
@@ -95,6 +91,14 @@ set encoding=utf-8
 set t_Co=256          "color support for 256 colors
 
 call vundle#end()
+
+syntax enable
+set background=dark     "setting the vim background
+colorscheme solarized "changes the color scheme( which in turn modifies every thing including the colors of the comments and keyword etc
+"setting the color scheme
+
+
+
 filetype plugin indent on     " required!
 
 "this is for enabling the syntax highlighting for the markdown language even
