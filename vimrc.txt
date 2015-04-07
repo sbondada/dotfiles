@@ -54,11 +54,11 @@ Plugin 'gmarik/Vundle.vim'
 " My bundles here:
 " original repos on GitHub
 Plugin 'tpope/vim-fugitive'
-Plugin 'davidhalter/jedi-vim'
 
 "javascript plugin installation
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
+
 Plugin 'nathanaelkane/vim-indent-guides'
 " setting the indent colors based on the colorschem
 let g:indent_guides_auto_colors = 0
@@ -68,23 +68,23 @@ let g:indent_guides_guide_size=1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=236
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=235
 
-Plugin 'Valloric/YouCompleteMe'
-" These are the tweaks I apply to YCM's config, you don't need them but they might help.
-" YCM gives you popups and splits by default that some people might not like, so these should tidy it up a bit for you.
-let g:ycm_add_preview_to_completeopt=0
-let g:ycm_confirm_extra_conf=0
-set completeopt-=preview
-Plugin 'marijnh/tern_for_vim'
-"syntax on has to be externally onned to get the syntax highlights on to the
-"code
 syntax on
 Plugin 'flazz/vim-colorschemes' 
 
 Plugin 'Solarized'
 
 Plugin 'scrooloose/nerdtree'
+
+" plugin for multiple cursor
+Plugin 'terryma/vim-multiple-cursors'
+
 Plugin 'scrooloose/syntastic'
+let g:syntastic_warning_symbol = '!!'
+let g:syntastic_error_symbol = '**'
+
 Plugin 'bling/vim-airline'
+
+Plugin 'airblade/vim-gitgutter'
 
 "install the powerline symbols and the download the font and set them based on below code (info in vim bookmarks) 
 "set guifont=Liberation\ Mono\ for\ Powerline\ 10 
