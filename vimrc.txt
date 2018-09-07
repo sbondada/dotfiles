@@ -83,6 +83,7 @@ let g:syntastic_warning_symbol = '!!'
 let g:syntastic_error_symbol = '**'
 
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'airblade/vim-gitgutter'
 
